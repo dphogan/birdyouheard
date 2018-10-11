@@ -1,0 +1,67 @@
+body{
+    background-color: black;
+    color: white;
+    font-family: 'Poppins', sans-serif
+}
+
+.title{
+    margin: auto;
+    text-align: center;
+    font-size: 300%;
+}
+
+.subtitle{
+    margin: auto;
+    width: 50%;
+    text-align: center;
+    font-size: 200%;
+}
+
+.center{
+    margin: auto;
+}
+
+hr{
+    border: 0;
+    height: 1px;
+    background: white;
+}
+
+.idfield{
+    border-radius: 0px;
+    width: 280px;
+    box-sizing: border-box;
+}
+
+.idbutton{
+    border-radius: 0px;
+}
+
+.idbutton:hover{
+    background-color: whitesmoke;
+}
+
+.busysignal{
+    display: none;
+    color: green;
+    font-weight: bold;
+    margin: auto;
+}
+
+.col3{
+    color: gray;
+    font-style: italic;
+}
+
+.rankhead>tr>td{
+    border-bottom: 1px solid white;
+}
+
+table.results{
+    /*border: 1px solid white;
+    padding: 25px;
+    left-margin: auto;
+    right-margin: auto;*/
+    border-collapse: collapse;
+    display: none;
+}

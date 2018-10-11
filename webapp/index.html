@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lan="en">
+<head>
+<meta charset="UTF-8">
+<title>BirdYouHeard.com</title>
+<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="js/d3.min.js"></script>
+<script type="text/javascript" src="upload.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+<div class="title">BirdYouHeard</div>
+<div class="subtitle">Bird Call Identifier</div>
+<hr width=100%>
+
+<table align="center"><tr><td><!--bgcolor="#404040"-->
+<form method="post" enctype="multipart/form-data" id="uploadform" action="javascript: upload();">
+Upload an audio recording of a bird (.mp3 or .wav):<br>
+<input type="hidden" name="MAX_FILE_SIZE" value="50000000">
+<input type="file" name="userfile" id="userfile" class="idfield">
+<input type="submit" value="Identify" name="submit" class="idbutton">
+</form>
+<br>
+<form method="post" id="copyurlform" action="javascript: copyurl();">
+Or, enter the URL of a recording online:<br>
+<input type="text" id="text" placeholder="URL" class="idfield"><!--size=28-->
+<input type="submit" value="Identify" name="submit" class="idbutton">
+</form>
+<br>
+<form method="post" id="exampleform" action="javascript: example();">
+Or, select an example from the drop-down menu:<br>
+<select id="select" class="idfield"><!--width=30-->
+<option value="">Select</option>
+<option value="hawk.mp3">Red-Tailed Hawk Example</option>
+<option value="sparrow.mp3">House Sparrow Example</option>
+</select>
+<input type="submit" value="Identify" name="submit" class="idbutton">
+</form>
+</td></tr></table>
+
+<p><div class="busysignal"><center>Working...</center></div></p>
+<center><table class="results" cellpadding=5>
+<thead class="rankhead" align="left"><tr>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>Common Name</td>
+	<td>Scientific Name</td>
+	<td>Probability</td>
+	<td>Links</td>
+</tr></thead>
+<tbody id="ranktable" align="left"></tbody>
+</table></center>
+
+<p align="center"><a href="https://docs.google.com/presentation/d/1YgQcWl3pxg3bc__EooZmPuuRzmImcNTbueZ7AoRBUCk/edit?usp=sharing" target="_blank">Slides</a> | <a href="all.html" target="_blank">All Species</a></p>
+
+</body>
+</html>
